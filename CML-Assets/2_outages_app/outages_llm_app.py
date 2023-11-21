@@ -2,15 +2,8 @@ import os
 import gradio
 import pandas as pd
 import openai
-import configparser
 
-config = configparser.ConfigParser()
-config.read('config.conf')
-
-if os.getenv('OPENAI-KEY'):
-    openai.api_key = os.getenv('OPENAI-KEY')
-else:
-    openai.api_key = config['DEFAULT']['open_ai_api_key']
+openai.api_key = os.getenv('OPENAI_KEY')
 
 # Custom CSS
 custom_css = f"""

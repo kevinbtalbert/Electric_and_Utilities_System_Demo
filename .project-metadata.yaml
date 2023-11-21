@@ -8,9 +8,10 @@ prototype_version: 1.0
 date: "2023-11-20"
 
 environment_variables:
-  OPENAI-KEY:
-    description: "If this is not set now, it will need to be set in the config.conf for the outages LLM app."
-    required: false
+  OPENAI_KEY:
+    default: "sk-xxxx"
+    description: "If this is not set now, it will need to be configured for the Outages LLM app to function."
+    required: true
 
 runtimes:
   - editor: Workbench

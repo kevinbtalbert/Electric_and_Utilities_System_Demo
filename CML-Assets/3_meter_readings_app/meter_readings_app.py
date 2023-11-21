@@ -7,7 +7,7 @@ import pandas as pd
 import os
 
 # Read the generated dataset (make sure to replace this path with the correct one on your machine)
-df = pd.read_csv("./data/generated_utility_data_12_months.csv")
+df = pd.read_csv("/home/cdsw/CML-Assets/data/generated_utility_data_12_months.csv")
 
 # Prepare the data for plotting
 df['Billing Start Date'] = pd.to_datetime(df['Billing Start Date'])
@@ -101,5 +101,4 @@ def update_time_series(selected_customer_id):
 
 # Run the Dash app
 if __name__ == '__main__':
-    app.run_server(debug=True)
-    #app.run_server(debug=True, port=int(os.getenv('CDSW_APP_PORT')))
+    app.run_server(debug=True, port=int(os.getenv('CDSW_APP_PORT')))
