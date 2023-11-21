@@ -1,4 +1,4 @@
-Asset Num,Asset Type,Latitude,Longitude,Status
+Asset_Num,Asset_Type,Latitude,Longitude,Status
 1,Power Line,35.217570368545815,-80.83538107376314,Operational
 2,Power Line,35.233282956499416,-80.83901196168078,Out of Service
 3,Switch,35.23342383527658,-80.85122489831681,Out of Service
