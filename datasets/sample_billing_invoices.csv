@@ -1,4 +1,4 @@
-Customer ID,Billing Start Date,Billing End Date,Previous Meter Reading,Current Meter Reading,Usage (kWh),Total Charge
+Customer Num,Billing Start Date,Billing End Date,Previous Meter Reading,Current Meter Reading,Usage (kWh),Total Charge
 1000,2023-01-01,2023-01-31,2305,2386,81,12.15
 1001,2023-01-01,2023-01-31,3538,3764,226,33.9
 1002,2023-01-01,2023-01-31,1149,1607,458,68.7
