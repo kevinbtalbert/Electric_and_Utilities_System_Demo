@@ -3,11 +3,11 @@ Using CDF, CDW, CML and Data Viz, this demo is a complete Electric and Utilities
 
 This demo is in three parts. Refer to the component parts by their individual markdowns below:
 
-[CDF Readme](/CDF-Assets/README.md)
+### [CDF Readme](/CDF-Assets/README.md)
 
-[CDW / Data Viz Readme](/CDW-Assets/README.md)
+### [CDW / Data Viz Readme](/CDW-Assets/README.md)
 
-[CML Readme](/CML-Assets/README.md)
+### [CML Readme](/CML-Assets/README.md)
 
 ## The Data Sources
 
