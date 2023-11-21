@@ -1,0 +1,384 @@
+==============================================================================
+Cloudera JDBC Data Connector for Apache Impala Release Notes 
+==============================================================================
+
+The release notes provide details of enhancements, features, workflow changes,
+and known issues in Cloudera JDBC Connector for Apache Impala 2.6.32 as well 
+as the version history. 
+
+
+2.6.32 =======================================================================
+
+Released 2023-06-30
+
+Enhancements & New Features
+
+ * [IMPJ-740] Updated Jackson library
+
+   The connector now uses the following Jackson versions: 
+   - jackson-annotations 2.15.2 (previously 2.13.4)
+   - jackson-core 2.15.2 (previously 2.13.4)
+   - jackson-databind 2.15.2 (previously 2.13.4.2)
+
+
+Resolved Issues
+The following issue has been resolved in Cloudera JDBC Connector for Apache 
+Impala 2.6.32.
+
+ * [02642284][IMPJ-719] On CHAR and VARCHAR types, the CAST statement fails. 
+ 
+
+Workflow Changes ============================================================= 
+
+The following changes may disrupt established workflows for the connector.
+
+
+2.6.28 -----------------------------------------------------------------------
+
+ * [00387819][00387820][IMPJ-707][IMPJ-708] Updated logging levels
+
+   Some log entries logged at the WARNING level are now logged as DEBUG. To 
+   see these log entries, increase the log level from WARNING to DEBUG. 
+
+
+2.6.27 -----------------------------------------------------------------------
+
+ * [IMPJ-685] Removed slf4j-log4j12 dependency
+
+   Beginning with this release, the connector no longer includes the 
+   slf4j-log4j12 library in the JAR file. 
+
+
+2.6.24 -----------------------------------------------------------------------
+
+ * [IMPJ-661] Removed third-party libraries
+
+   Beginning with this release, the connector no longer includes the ZooKeeper
+   and Jute libraries in the JAR file.
+   
+   
+2.6.23 -----------------------------------------------------------------------
+
+ * [IMPJ-536] Removed support for JDBC 4.0 (Java 6)
+
+   Beginning with this release, the driver no longer supports JDBC 4.0 (Java 6
+   ). For a list of supported JDBC versions, see the Installation and 
+   Configuration Guide.
+
+
+2.6.20 -----------------------------------------------------------------------
+
+ * [IMPJ-612] Removed support for earlier versions of CDH
+
+   Beginning with this release, the driver no longer supports JDBC 4.0 
+   (Java 6). For a list of supported JDBC versions, see the Installation and 
+   Configuration Guide.
+
+
+2.6.19 -----------------------------------------------------------------------
+
+ * [IMPJ-597] Removed support for Cloudera Altus
+
+    Beginning with this release, the driver no longer supports Cloudera Altus.
+	
+
+2.6.17 -----------------------------------------------------------------------
+
+ * [IMPJ-553] Removed support for earlier versions of Impala and CDH
+
+    Beginning with this release, the driver no longer supports Impala 2.7 and 
+    CDH 5.0 to 5.10. For a list of supported versions, see the Installation 
+    and Configuration Guide.
+
+
+2.6.16 -----------------------------------------------------------------------
+
+ * [IMPJ-501] Removed support for Impala 1.0.1 to 2.6
+ 
+   Beginning with this release, the driver no longer supports Impala 1.0.1 to
+   2.6. For a list of supported Impala versions, see the Installation and 
+   Configuration Guide.
+   
+
+2.6.15 -----------------------------------------------------------------------
+
+ * New default port
+
+   Beginning with this release, if the port is not specified in the 
+   connection URL, the driver uses a default port depending on the specified 
+   transport mode:
+
+   - If the transport mode is set to HTTP, the driver uses port 28000 as the 
+     default.
+   - If the transport mode is set to SASL or binary, or is not specified, 
+     the driver uses port 21050 as the default.
+
+   Previously, the driver always used port 21050 as the default port.
+
+
+2.6.1 ------------------------------------------------------------------------
+
+ * Removed support for JDBC 3 (Java 5)
+
+   Beginning with this release, the driver no longer supports JDBC 3 (Java 
+   5). Only JDBC 4 (Java 6) and JDBC 4.1 (Java 7) are supported.
+
+
+Version History ==============================================================
+
+2.6.31 -----------------------------------------------------------------------
+
+Released 2023-04-26
+
+Enhancements & New Features
+
+ * [00400768][IMPJ-721] Native GSS-API support
+
+   The connector now supports the native GSS-API feature in the JDK without 
+   the need to set the AllowTgtSessionKey property in the Windows registry. 
+   For more information, see the Installation and Configuration Guide.
+
+ * [00420456][IMPJ-733] Support for JWT authentication
+
+   You can now authenticate your connections to clusters with JWT 
+   authentication. To do this, select JWT Authentication from the Mechanism 
+   drop-down list (set the AuthMech property to 14). For more information, see
+   the Installation and Configuration Guide. 
+
+ * [IMPJ-736] Updated third-party library
+
+   The connector has been upgraded with the following third-party libraries:
+   - Apache HttpClient 4.5.14 (previously 4.5.13)
+   - Apache HttpCore 4.4.16 (previously 4.4.14)
+   - log4j-api 2.20.0 (previously 2.17.1)
+   - log4j-core 2.20.0 (previously 2.17.1)
+   - log4j-slf4j-impl 2.20.0 (previously 2.17.1)
+   - slf4j 1.7.36 (previously 1.7.30)
+   - thrift 0.17.0 (previously 0.13.0)
+
+
+2.6.30 -----------------------------------------------------------------------
+
+Released 2022-12-16
+
+Enhancements & New Features
+
+ * [00406889][IMPJ-723][IMPJ-724] Updated Jackson library
+
+   The connector now uses the following Jackson versions: 
+   - jackson-annotations 2.13.4 (previously 2.13.2)
+   - jackson-core 2.13.4 (previously 2.13.2)
+   - jackson-databind 2.13.4.2 (previously 2.13.2.2)
+
+
+2.6.29 -----------------------------------------------------------------------
+
+Released 2022-07-29
+
+Enhancements & New Features
+
+ * [00371927][IMPJ-697] Updated SAML SSO authentication behavior
+ 
+   When using SAML SSO authentication, the connector now automatically closes
+   the browser tab opened by the connector. By default, the tab closes five 
+   seconds after successfully authenticating. Note that the tab does not 
+   automatically close after login credentials are entered during the first
+   authentication attempt. Only tabs opened during subsequent authentication
+   attempts, where login credentials are not required, are closed 
+   automatically. If a browser window is not already opened, SAML SSO 
+   authentication attempts always prompt the user for credentials.
+
+
+Resolved Issues
+The following issue has been resolved in Cloudera JDBC Connector for Apache 
+Impala 2.6.29.
+
+ * [00391275][IMPJ-713] After closing HTTP connections, the connector does not
+   clean up native threads. 
+
+
+2.6.28 -----------------------------------------------------------------------
+
+Released 2022-06-30
+
+Enhancements & New Features
+
+ * [IMPJ-696] Updated query behavior
+ 
+   You can now configure the connector to return a regular result set, rather
+   than a row count. To do this, set the NonRowcountQueryPrefixes property to 
+   a comma-separated list of queries. For more information, see the 
+   Installation and Configuration Guide.
+
+ * [IMPJ-702] Updated Jackson library
+
+   The connector now uses the following Jackson versions: 
+   - jackson-annotations 2.13.2 (previously 2.13.1)
+   - jackson-core 2.13.2 (previously 2.13.1)
+   - jackson-databind 2.13.2.2 (previously 2.13.1)
+   - jackson-dataformat-cbor 2.13.2 (previously 2.13.1)
+
+  
+Resolved Issues
+The following issue has been resolved in Cloudera JDBC Connector for Apache 
+Impala 2.6.28.
+
+ * [00384532][IMPJ-706] In some cases, the connector calls the 
+   CloseImpalaOperation API twice, then calls the CloseOperation API in the 
+   same query, causing the server to return an error and the application 
+   workflow to fail.
+
+ * [00387819][00387820][IMPJ-707][IMPJ-708] In some cases, log entries are
+   logged at the WARNING level instead of the DEBUG level. 
+
+ * [00388538][IMPJ-709] When the server closes the TCP connection due to an 
+   idle timeout, the connector attempts to reuse a TCP connection for an HTTP 
+   request afterwards, resulting in a "Communication link failure" error.
+
+
+2.6.27 -----------------------------------------------------------------------
+
+Released 2022-03-04
+
+Enhancements & New Features
+
+ * [IMPJ-686] Updated log4j third-party libraries
+
+   The JDBC 4.2 version of the connector has been updated to version 2.17.1
+   of the log4j third-party libraries.
+
+   The JDBC 4.1 version of the connector has been updated to version 2.12.4
+   of the log4j third-party libraries. To address security vulnerabilities, do
+   one of the following: 
+   - In PatternLayout in the logging configuration, replace Context Lookups 
+     like ${ctx:loginId} or $${ctx:loginId} with Thread Context Map patterns 
+     (%X, %mdc, or %MDC). 
+   - Otherwise, in the configuration, remove references to Context Lookups 
+     like ${ctx:loginId} or $${ctx:loginId} where they originate from sources
+     external to the application such as HTTP headers or user input.
+ 
+ * [IMPJ-688] Updated Jackson library
+
+   The connector now uses version 2.13.1 of the Jackson library. Previously, 
+   the connector used Jackson version 2.12.3.  
+   
+   
+Resolved Issues
+The following issue has been resolved in Cloudera JDBC Connector for Apache 
+Impala 2.6.27.
+
+ * [IMPJ-691] When close() is not called on the connection object, the 
+   connector prevents the JVM from exiting.
+
+
+2.6.26 -----------------------------------------------------------------------
+
+Released 2021-12-24
+   
+Enhancements & New Features
+
+ * [IMPJ-673] Updated log4j third-party libraries
+
+   The JDBC 4.2 version of the connector has been updated to version 2.17.0
+   of the log4j third-party libraries.
+   
+   The JDBC 4.1 version of the connector has been updated to version 2.12.2
+   of the log4j third-party libraries. To address security vulnerabilities, do
+   one of the following: 
+   - In PatternLayout in the logging configuration, replace Context Lookups 
+     like ${ctx:loginId} or $${ctx:loginId} with Thread Context Map patterns 
+     (%X, %mdc, or %MDC). 
+   - Otherwise, in the configuration, remove references to Context Lookups 
+     like ${ctx:loginId} or $${ctx:loginId} where they originate from sources
+     external to the application such as HTTP headers or user input.
+	 
+
+2.6.25 -----------------------------------------------------------------------
+
+Released 2021-12-03
+   
+Resolved Issues
+The following issue has been resolved in Cloudera JDBC Connector for Impala 
+2.6.25.
+
+ * [IMPJ-668] When using the WITH clause and column names in a query, the 
+   connector returns incorrect results. 
+   
+
+2.6.24 -----------------------------------------------------------------------
+
+Released 2021-08-20
+
+Enhancements & New Features
+
+ * [IMPJ-630] Ignore transactions support
+ 
+   You can now ignore transaction-related operations. To do this, set the 
+   IgnoreTransactions property to 1. For more information, see the
+   Installation and Configuration Guide.
+
+ * [IMPJ-633][IMPJ-655] Updated third-party libraries
+ 
+   The connector has been upgraded with the following third-party libraries:
+   - Apache Commons Codec 1.15 (previously 1.9)
+   - Apache HttpClient 4.5.13 (previously 4.5.3)
+   - Apache HttpCore 4.4.14 (previously 4.4.6)
+   - Jackson 2.12.3 (previously 2.10.1)
+   
+
+Resolved Issues
+The following issues have been resolved in Cloudera JDBC Connector for Impala 
+2.6.24.
+
+ * [00300232][IMPJ-648] When executing INSERT queries, the connector casts 
+   empty strings to CHAR(1).
+ 
+ * [IMPJ-652] The ImpalaJDBCDataEngine does not check getFunctions and returns
+   an empty result set.
+
+ * [IMPJ-653] In some cases, when using Safari, SSO authentication fails and 
+   returns a 302 error.   
+
+
+2.6.23 -----------------------------------------------------------------------
+
+Released 2021-02-26
+
+Enhancements & New Features
+
+ * [IMPJ-604] SSO authentication
+ 
+   You can now authenticate using single sign-on (SSO) via SAML 2.0 on
+   supported servers. For more information, see the Installation and
+   Configuration Guide.
+   
+
+2.6.22 -----------------------------------------------------------------------
+
+Released 2021-01-22
+
+Enhancements & New Features
+
+ * [00289968][IMPJ-627] Updated SSL support
+ 
+   The driver now supports BCFKS TrustStores files. To specify the TrustStore
+   type, set the SSLTrustStoreType property to the preferred type. For more 
+   information, see the Installation and Configuration Guide.
+   
+  
+============================================================================== 
+Contact Us 
+============================================================================== 
+
+If you are having difficulties using the driver, our Community Forum 
+(http://community.cloudera.com) may have your solution. In addition to 
+providing user to user support, our forums are a great place to share your 
+questions, comments, and feature requests with us. 
+
+If you are a Subscription customer you may also use the Cloudera Support 
+Portal (http://www.cloudera.com/content/cloudera/en/support/home.html) to 
+search the Knowledge Base or file a Case.
+
+Important: To help us assist you, prior to contacting Cloudera Support please 
+prepare a detailed summary of the client and server environment including 
+operating system version, patch level, and configuration.

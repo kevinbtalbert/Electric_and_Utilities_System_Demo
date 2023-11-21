@@ -1,0 +1,156 @@
+==============================================================================
+Cloudera JDBC Driver for Apache Hive Release Notes 
+==============================================================================
+
+The release notes provide details of enhancements, features, breaking 
+changes, and known issues in Cloudera JDBC Driver for Apache Hive 2.6.5, as 
+well as the version history. 
+
+
+2.6.5 ======================================================================= 
+
+Released 2019-02-21
+
+ 
+Resolved Issues
+The following issue was resolved in Cloudera JDBC Driver for Apache Hive 
+2.6.5.
+
+ * [00139103][HIVEJ-534] If a SQL query ends in a semicolon, the driver 
+   reports an error.
+
+   This issue has been resolved. The driver now removes trailing semicolons 
+   from queries before sending them to the server.
+
+
+Breaking Changes =============================================================
+
+The following are breaking changes to driver functionality. These changes may 
+cause some workflows from earlier versions of the driver to fail.
+
+
+2.6.1 -----------------------------------------------------------------------
+
+ * Removed support for JDBC 3 (Java 5)
+
+   Beginning with this release, the driver no longer supports JDBC 3 (Java 
+   5). Only JDBC 4 (Java 6) and JDBC 4.1 (Java 7) are supported.
+
+
+Version History ==============================================================
+
+2.6.4 ----------------------------------------------------------------------- 
+
+Released 2019-02-15
+
+Enhancements & New Features
+
+ * [HIVEJ-481] Updated Hive Service support
+ 
+   The driver now uses Hive Service 3.1.1 for HiverServer2 connections.
+
+ * [HIVEJ-501] Updated Hive support
+ 
+   The driver now supports Apache Hive versions 0.11 through 3.1.
+   
+ * [HIVEJ-503][HIVEJ-509][HIVEJ-511][HIVEJ-512] Updated third-party libraries
+ 
+   The driver now uses the following third-party libraries:
+   - Thrift 0.11.0
+   - Log4j 1.2.17
+   - slf4j-api 1.7.25
+   - slf4j-log4j12 1.7.25
+   - ZooKeeper 3.4.13
+
+   
+Resolved Issues
+The following issue was resolved in Cloudera JDBC Driver for Apache Hive 
+2.6.4.
+
+ * [00132424][HIVEJ-498] Queries that use REGEX column specification fail.
+   
+   This issue has been resolved. The driver no longer attempts to parse REGEX 
+   column specification.
+
+
+2.6.2 -----------------------------------------------------------------------
+
+Released 2018-05-22
+
+Enhancements & New Features
+
+ * [HIVEJ-505] CDH 5.15 now supported
+
+   The driver now supports CDH versions 5.0 through 5.15.
+
+   
+Resolved Issues
+The following issue was resolved in Cloudera JDBC Driver for Apache Hive 
+2.6.2.
+
+ * The driver does not behave according to the SocketTimeout setting, and
+   stops responding instead of returning an  error when the server takes too
+   long to respond to a request.
+   
+   This issue has been resolved. The driver now returns an error if the amount
+   of time taken by the server to respond to a request exceeds the number of
+   seconds specified by the SocketTimeout setting.
+
+
+2.6.1  -----------------------------------------------------------------------
+
+Released 2018-04-27
+
+Enhancements & New Features
+
+ * Improved installation process
+
+   Third-party libraries are now bundled with the driver as a shaded jar file.
+
+ * Updated hive-service
+
+   The driver has been upgraded to use hive-service-2.0.1 with JDBC 4.1 and 
+   hive-service-1.1.1 for JDBC 4.
+
+ * Updated third-party libraries
+
+   The driver has been upgraded to use http-client 4.5.3, http-core 4.4.6, 
+   commons-codec 1.9, commons-logging 1.2, and Zookeeper 3.4.11.
+
+   
+Resolved Issues
+The following issues were resolved in Cloudera JDBC Driver for Apache Hive 
+2.6.1.
+
+ * [00115543] A string literal after a back-tick ( ` ) is treated as a 
+   comment.
+
+ * [00115424] When the driver attempts to connect to the server using 
+   Beeline, an error occurs on the server and an exception is logged by the 
+   driver. 
+
+   This issue has been resolved. Now, when connecting to the server using 
+   Beeline, connection properties such as "driver" and "url" are no longer 
+   treated as configuration properties for the server, and the driver does 
+   not send SET queries to the server with these properties.
+
+ * [00114906] The driver removes query comments and hints when the 
+   UseNativeQuery property is set to 1.
+
+
+============================================================================== 
+Contact Us 
+============================================================================== 
+
+If you are having difficulties using the driver, our Community Forum 
+(http://community.cloudera.com) may have your solution. In addition to 
+providing user to user support, our forums are a great place to share your 
+questions, comments, and feature requests with us. 
+
+If you are a Subscription customer you may also use the Cloudera Support 
+Portal (http://www.cloudera.com/content/cloudera/en/support/home.html) to 
+search the Knowledge Base or file a Case.
+
+Important: To help us assist you, prior to contacting Cloudera Support please 
+prepare a detailed summary of the client and server environment including 
+operating system version, patch level, and configuration.

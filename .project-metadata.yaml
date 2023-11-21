@@ -1,0 +1,44 @@
+name: Electric and Utilities CDP Demo
+description: |
+  This AMP demonstrates a complete electric/utilities demo running within the Cloudera Data Platform. It leverages CDF (or the Datahub equivalent) for data ingestion and real time analysis, CDW for data visualization and BI, and CML for extending gen AI and standard visualized use cases into hosted applications.
+
+author: Cloudera Inc.
+specification_version: 1.0
+prototype_version: 1.0
+date: "2023-11-20"
+
+runtimes:
+  - editor: Workbench
+    kernel: Python 3.9
+    edition: Standard
+
+tasks:
+  - type: run_session
+    name: Install Dependencies
+    script: 1_session-install-deps/install_dependencies.py
+    short_summary: Install Dependencies
+    kernel: python3
+    cpu: 2
+    memory: 8
+
+  - type: start_application
+    name: Outages LLM Chatbot
+    subdomain: cmlllm
+    script: 2_outages_app/outages_llm_app.py
+    short_summary: Start Outages LLM Chatbot application
+    long_summary: This application is 1/2 to demonstrate how LLMs/CML can be used within the Electric and Utilities use case.
+    cpu: 2
+    memory: 4
+    environment_variables:
+      TASK_TYPE: START_APPLICATION
+
+  - type: start_application
+    name: Meter Data Dashboard
+    subdomain: cmlllm
+    script: 3_meter_readings_app/meter_readings_app.py
+    short_summary: Start Dashboard of Meter Readings application
+    long_summary: This application is 2/2 to demonstrate how Hosted Apps/CML can be used within the Electric and Utilities use case.
+    cpu: 2
+    memory: 4
+    environment_variables:
+      TASK_TYPE: START_APPLICATION
