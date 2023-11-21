@@ -9,6 +9,14 @@ This demo is in three parts. Refer to the component parts by their individual ma
 
 ### [CML Readme](/CML-Assets/README.md)
 
+## Situation / Outcomes
+
+![](/CML-Assets/app_assets/situation-to-outcomes.png)
+
+## Architecture
+
+![](/CML-Assets/app_assets/architecture.png)
+
 ## The Data Sources
 
 ### Data Flow Data Sets Used
