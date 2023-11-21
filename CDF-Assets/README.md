@@ -6,7 +6,7 @@ Cloudera DataFlow here is an abstraction of NiFi on Kubernetes which will allow 
 
 ## Deploying the Template
 
-Use the `ElectricUtilitiesDemo.json` NiFi flow template at the top level of the CDF-Assets folder to deploy in CDF or NiFi.
+Use the [ElectricUtilitiesDemo.json](/CDF-Assets/ElectricUtilitiesDemo.json) NiFi flow template at the top level of the CDF-Assets folder to deploy in CDF or NiFi.
 
 ## Demonstrating the parts of the Flow
 
