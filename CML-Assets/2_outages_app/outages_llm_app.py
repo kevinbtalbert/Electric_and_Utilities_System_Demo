@@ -98,7 +98,7 @@ def get_responses(option, question):
 def get_outages_by_area(area_name):
     try:
         # Read the CSV file
-        data = pd.read_csv('./data/utility_outage_data.csv')
+        data = pd.read_csv('/home/cdsw/CML-Assets/data/utility_outage_data.csv')
 
         # Convert the 'Area Name' column to uppercase for case-insensitive comparison
         data['Area Name'] = data['Area Name'].str.upper()
@@ -119,7 +119,7 @@ def get_outages_by_area(area_name):
 def get_customers_served_by_area(area_name):
     try:
         # Read the CSV file
-        data = pd.read_csv('./data/utility_outage_data.csv')
+        data = pd.read_csv('/home/cdsw/CML-Assets/data/utility_outage_data.csv')
 
         # Convert the 'Area Name' column to uppercase for case-insensitive comparison
         data['Area Name'] = data['Area Name'].str.upper()
@@ -140,7 +140,7 @@ def get_customers_served_by_area(area_name):
 def get_customers_affected_by_area(area_name):
     try:
         # Read the CSV file
-        data = pd.read_csv('./data/utility_outage_data.csv')
+        data = pd.read_csv('/home/cdsw/CML-Assets/data/utility_outage_data.csv')
 
         # Convert the 'Area Name' column to uppercase for case-insensitive comparison
         data['Area Name'] = data['Area Name'].str.upper()
