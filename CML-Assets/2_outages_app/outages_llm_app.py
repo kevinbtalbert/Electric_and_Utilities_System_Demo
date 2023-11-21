@@ -21,7 +21,7 @@ custom_css = f"""
             color: white;
         }}
         gradio-app {{
-            background-image: url('https://raw.githubusercontent.com/kevinbtalbert/cloudera_kb/main/app_assets/cldr_bg.jpg') !important;
+            background-image: url('https://raw.githubusercontent.com/kevinbtalbert/Electric_and_Utilities_System_Demo/main/CML-Assets/app_assets/cldr_bg.jpg') !important;
             background-size: cover  !important;
             background-position: center center  !important;
             background-repeat: no-repeat  !important;
@@ -31,7 +31,7 @@ custom_css = f"""
             text-align: center;
         }}
         .dark {{
-            background-image: url('https://raw.githubusercontent.com/kevinbtalbert/cloudera_kb/main/app_assets/cldr_bg.jpg') !important;
+            background-image: url('https://raw.githubusercontent.com/kevinbtalbert/Electric_and_Utilities_System_Demo/main/CML-Assets/app_assets/cldr_bg.jpg') !important;
             background-size: cover  !important;
             background-position: center center  !important;
             background-repeat: no-repeat  !important;

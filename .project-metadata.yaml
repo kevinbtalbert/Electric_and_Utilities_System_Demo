@@ -15,7 +15,7 @@ runtimes:
 tasks:
   - type: run_session
     name: Install Dependencies
-    script: 1_session-install-deps/install_dependencies.py
+    script: CML-Assets/1_session-install-deps/install_dependencies.py
     short_summary: Install Dependencies
     kernel: python3
     cpu: 2
@@ -24,7 +24,7 @@ tasks:
   - type: start_application
     name: Outages LLM Chatbot
     subdomain: cmlllm
-    script: 2_outages_app/outages_llm_app.py
+    script: CML-Assets/2_outages_app/outages_llm_app.py
     short_summary: Start Outages LLM Chatbot application
     long_summary: This application is 1/2 to demonstrate how LLMs/CML can be used within the Electric and Utilities use case.
     cpu: 2
@@ -35,7 +35,7 @@ tasks:
   - type: start_application
     name: Meter Data Dashboard
     subdomain: cmlllm
-    script: 3_meter_readings_app/meter_readings_app.py
+    script: CML-Assets/3_meter_readings_app/meter_readings_app.py
     short_summary: Start Dashboard of Meter Readings application
     long_summary: This application is 2/2 to demonstrate how Hosted Apps/CML can be used within the Electric and Utilities use case.
     cpu: 2
