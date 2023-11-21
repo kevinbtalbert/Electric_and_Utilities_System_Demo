@@ -49,7 +49,7 @@ def main():
     # Configure gradio QA app 
     print("Configuring gradio app")
     demo = gradio.Interface(fn=get_responses,
-                            title="Electric Company AI-Powered Assistant",
+                            title="Electric & Utilities Company AI-Powered Assistant",
                             description="This AI-powered assistant is designed to help you understand outages in your area as well as be a source for questions about your utility company. For outages, served, and affected, simply enter the area name. You can ask complete questions for the chatbot.",
                             inputs=[gradio.Radio(['outages', 'customers-served', 'customers-affected', 'chatbot'], label="Select Use Case", value="outages"), gradio.Textbox(label="Area/Question", placeholder="")],
                             outputs=[gradio.Textbox(label="Response")],
