@@ -7,6 +7,11 @@ specification_version: 1.0
 prototype_version: 1.0
 date: "2023-11-20"
 
+environment_variables:
+  OPENAI-KEY:
+    description: "If this is not set now, it will need to be set in the config.conf for the outages LLM app."
+    required: false
+
 runtimes:
   - editor: Workbench
     kernel: Python 3.9

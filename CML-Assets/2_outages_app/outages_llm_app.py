@@ -7,8 +7,8 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.conf')
 
-if os.getenv('openai-key'):
-    openai.api_key = os.getenv('openai-key')
+if os.getenv('OPENAI-KEY'):
+    openai.api_key = os.getenv('OPENAI-KEY')
 else:
     openai.api_key = config['DEFAULT']['open_ai_api_key']
 
