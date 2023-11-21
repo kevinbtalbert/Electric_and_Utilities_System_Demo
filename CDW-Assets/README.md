@@ -1,5 +1,7 @@
 # CDW (+ Data Visualization) Portion of Electric and Utilities System Demo
 
+### [<-- Click here to go back to top-level Readme](/README.md)
+
 ## CDW for Data Analysts
 
 SQL queries can be conducted visually through Hue.

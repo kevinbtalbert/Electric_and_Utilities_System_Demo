@@ -1,5 +1,7 @@
 # CML Portion of Electric and Utilities System Demo
 
+### [<-- Click here to go back to top-level Readme](/README.md)
+
 Two apps have been designed to showcase functional applications of utilities use cases. The first is based on an application of Large Language Models and uses OpenAI for natural language processing of results of outages, customers served, and customers affected in a particular area. The second employs a Dash dashboard with several sample applications of data visualization in a hosted UI for relevant information grabs from a utility sample dataset.
 
 ## 1. Outages LLM Chatbot
