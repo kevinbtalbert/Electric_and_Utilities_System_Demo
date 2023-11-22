@@ -20,6 +20,12 @@ Create a new dataset in Data Visualization
 
 ![](/CDW-Assets/screenshots/viz-data-entries.png)
 
-Create and Host a Dashboard Using Data Visualization
+Create Multi-page Dashboards Using Data Visualization
 
 ![](/CDW-Assets/screenshots/data-viz-dash-1.png)
+
+![](/CDW-Assets/screenshots/data-viz-dash-2.png)
+
+Host a dashboard using Data Visualization
+
+![](/CDW-Assets/screenshots/data-viz-hosted.png)

@@ -10,13 +10,19 @@ Assuming AMP deployment, both applications should have a "running" state followi
 
 **Customer Outages in Avoyelles**
 
+**Try with sample datapoints:** *Avoyelles, Evangeline, Grant, or Rapides*
+
 ![](/CML-Assets/app_assets/customers-served.png)
 
 **Customers Served in Avoyelles**
 
+**Try with sample datapoints:** *Avoyelles, Evangeline, Grant, or Rapides*
+
 ![](/CML-Assets/app_assets/outages.png)
 
 **Utilities Chat**
+
+**Try with sample question:** *What are some of CLECOs initiatives*
 
 ![](/CML-Assets/app_assets/utilities-chat.png)
 
